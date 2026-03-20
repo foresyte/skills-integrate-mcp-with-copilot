@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="auth-controls">
+      <button id="user-menu-btn" class="icon-btn" type="button" aria-label="User menu">👤</button>
+      <div id="auth-menu" class="auth-menu hidden">
+        <button id="login-btn" type="button">Login</button>
+        <button id="logout-btn" type="button" class="hidden">Logout</button>
+      </div>
+    </div>
+
     <header>
       <h1>Mergington High School</h1>
       <h2>Extracurricular Activities</h2>
+      <p id="auth-status" class="auth-status">Viewing as student</p>
     </header>
 
     <main>
@@ -44,6 +53,26 @@
     <footer>
       <p>&copy; 2026 Mergington High School</p>
     </footer>
+
+    <div id="login-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <div class="modal-content">
+        <h3 id="login-title">Teacher Login</h3>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required />
+          </div>
+          <div class="modal-actions">
+            <button type="submit">Sign In</button>
+            <button id="close-modal-btn" type="button">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>

@@ -13,6 +13,40 @@ body {
   margin: 0 auto;
   padding: 20px;
   background-color: #f5f5f5;
+  position: relative;
+}
+
+.auth-controls {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 20;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff;
+  color: #1a237e;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.auth-menu {
+  margin-top: 8px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  min-width: 120px;
+}
+
+.auth-menu button {
+  width: 100%;
+  margin: 4px 0;
 }
 
 header {
@@ -26,6 +60,12 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+}
+
+.auth-status {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.95;
 }
 
 main {
@@ -197,4 +237,27 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: #ffffff;
+  width: min(420px, 92%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
 }
